@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- injector:css -->
+    <link rel="stylesheet" href="assets/css/g-auto-complete.min.1.0.0.css">
+    <!-- endinjector -->
+
+
+
+
+    <script>
+        window.onload=function(){
+            var source = [
+                {
+                    img : 'assets/img/default.jpg',
+                    username: 'ALİx',
+                    place: '1'
+                },
+                {
+                    img : 'assets/img/default.jpg',
+                    username: 'AL',
+                    place: '2'
+                },
+                {
+                    img : 'assets/img/default.jpg',
+                    username: 'ali',
+                    place: '2'
+                },
+                {
+                    img : 'assets/img/default.jpg',
+                    username: 'dba',
+                    place: '2'
+                },
+                {
+                    img : 'assets/img/default.jpg',
+                    username: 'daq',
+                    place: '2'
+                },
+                {
+                    img : 'assets/img/default.jpg',
+                    username: 'ghj',
+                    place: '3'
+                }
+            ]
+
+
+            $('.textInput').userSearch({
+                'source'          : source,
+                'width'           : '',
+                'deferRequest'    : 250,
+                'selectedCssClass': 'selectedText',
+                'mainCssClass'    : 'mainContent',
+                'isAutoComplete'  : false,
+                'maxRow'          : 4,
+                'content'         : '<div class="left"><img targetData="img"/></div><div class="rigth"><span class="r1" targetData="username" mainTarget="true"></span><div class="r1" targetData="place"></div></div>',
+                'emptyDataContent': '<span>Empty Data</span>',
+                'fullContextSearch': true,
+                'isCaseSensitive'  : true,
+                'characterReq'     : 1,
+                'mainTargetData'   : 'username',
+                'disableRemove'    : false
+
+
+            });
+        }
+
+
+    </script>
+    <title>Test Area</title>
+</head>
+<body>
+
+<input type="text"  class="textInput" id="input"  />
+
+<script type="text/javascript" src="js/lib/jquery-1.8.3.min.js"></script>
+<!-- injector:js -->
+<script src="js/g-auto-complete.min.1.0.0.js"></script>
+<!-- endinjector -->
+
+</body>
+</html>
